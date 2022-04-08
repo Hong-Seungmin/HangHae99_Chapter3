@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/week01" />
     <file type="web" url="file://$PROJECT_DIR$/week02" />
+    <file type="web" url="file://$PROJECT_DIR$/week03" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="azul-1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

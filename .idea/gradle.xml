@@ -22,6 +22,16 @@
           </set>
         </option>
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/week03" />
+        <option name="gradleJvm" value="azul-11" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/week03" />
+          </set>
+        </option>
+      </GradleProjectSettings>
     </option>
   </component>
 </project>
