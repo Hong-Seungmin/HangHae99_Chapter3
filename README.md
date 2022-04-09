@@ -2,6 +2,26 @@
 
 ### 1주차
 
+
+<details>
+<summary>토글템플릿
+</summary>
+<div markdown="1">
+- 내용
+</div>
+</details>
+
+
+<details>
+<summary>2일차
+</summary>
+<div markdown="1">
+
+</div>
+</details>
+
+
+
 <details>
 <summary>1일차
 </summary>
