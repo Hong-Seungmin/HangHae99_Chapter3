@@ -26,6 +26,11 @@ public class BoardRestController {
         return boardService.findAll();
     }
 
+    @GetMapping("/boards/{id}")
+    public Board getBoardOne(@PathVariable Long id) {
+        return boardService.findOne(id);
+    }
+
     @PatchMapping("/boards/{id}")
     public Long updateBoard(@PathVariable Long id, @RequestBody BoardDto boardDto) {
         return boardService.update(id, boardDto);

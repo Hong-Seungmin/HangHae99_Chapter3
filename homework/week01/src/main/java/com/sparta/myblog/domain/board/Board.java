@@ -49,7 +49,12 @@ public class Board extends Timestamped {
 
     public void update(BoardDto boardDto){
         this.title = boardDto.getTitle();
+        this.writer = boardDto.getWriter();
         this.content = boardDto.getContent();
+    }
+
+    public void plusView(){
+        this.views += 1;
     }
 
 

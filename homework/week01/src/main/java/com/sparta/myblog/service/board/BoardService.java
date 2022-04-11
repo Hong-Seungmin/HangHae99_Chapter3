@@ -30,6 +30,13 @@ public class BoardService {
     }
 
     @Transactional
+    public Board findOne(Long id){
+        Board board = boardRepository.findById(id).orElseThrow(NullPointerException::new);
+        board.plusView();
+        return board;
+    }
+
+    @Transactional
     public Long update(Long id, BoardDto boardDto) {
         Board board = boardRepository.findById(id).orElseThrow(NullPointerException::new);
         board.update(boardDto);

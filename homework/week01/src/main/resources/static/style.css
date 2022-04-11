@@ -69,3 +69,7 @@ table.type10 .even {
     padding: 74px 0;
     line-height: 23px;
 }
+
+#delete-board {
+    display: none;
+}
