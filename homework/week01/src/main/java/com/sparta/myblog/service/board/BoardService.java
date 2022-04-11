@@ -4,12 +4,10 @@ import com.sparta.myblog.domain.board.Board;
 import com.sparta.myblog.domain.board.BoardDto;
 import com.sparta.myblog.domain.board.BoardRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
@@ -25,14 +23,15 @@ public class BoardService {
     }
 
     public List<Board> findAll() {
-        Sort sort = Sort.by(Sort.Direction.DESC, "id", "createdAt");
-        return boardRepository.findAll(sort);
+        return boardRepository.findAllByOrderByModifiedAtDesc();
     }
 
     @Transactional
     public Board findOne(Long id){
         Board board = boardRepository.findById(id).orElseThrow(NullPointerException::new);
-        board.plusView();
+
+        // 데이터가 변하면서 수정시간이 변경된다..
+//        board.increaseView();
         return board;
     }
 

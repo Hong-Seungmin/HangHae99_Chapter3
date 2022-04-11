@@ -53,7 +53,7 @@ public class Board extends Timestamped {
         this.content = boardDto.getContent();
     }
 
-    public void plusView(){
+    public void increaseView(){
         this.views += 1;
     }
 

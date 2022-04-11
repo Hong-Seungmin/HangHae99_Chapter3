@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import javax.persistence.NonUniqueResultException;
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
@@ -20,7 +21,7 @@ public class CommentService {
     @Transactional
     public Long save(CommentDto commentDto) {
         Comment comment = commentRepository.save(new Comment(commentDto));
-        return comment.getId();
+        return comment.getBoardId();
     }
 
     @Transactional
@@ -28,17 +29,18 @@ public class CommentService {
         Comment comment = commentRepository.findById(id).orElseThrow(NonUniqueResultException::new);
         comment.update(commentDto);
 
-        return id;
+        return comment.getBoardId();
     }
 
     @Transactional
-    public void delete(Long id){
+    public Long delete(Long id){
         Comment comment = commentRepository.findById(id).orElseThrow(NonUniqueResultException::new);
+        Long boardId = comment.getBoardId();
         commentRepository.delete(comment);
+        return boardId;
     }
 
     public List<Comment> findAllByBoardId(Long id) {
-        Sort sort = Sort.by(Sort.Direction.DESC, "boardId", "createdAt");
-        return commentRepository.findAll(sort);
+        return commentRepository.findByBoardIdOrderByModifiedAtDesc(id);
     }
 }

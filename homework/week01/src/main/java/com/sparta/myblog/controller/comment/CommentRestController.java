@@ -16,15 +16,17 @@ public class CommentRestController {
     private final CommentService commentService;
 
     @GetMapping("/comments/{boardId}")
-    public List<Comment> getComments(Long boardId) {
+    public List<Comment> getComments(@PathVariable  Long boardId) {
         return commentService.findAllByBoardId(boardId);
     }
 
+    // 반환값 : 게시글 ID
     @PostMapping("/comments")
     public Long createComment(@RequestBody CommentDto commentDto) {
         return commentService.save(commentDto);
     }
 
+    // 반환값 : 게시글 ID
     @PatchMapping("/comments/{id}")
     public Long updateComment(@PathVariable Long id, @RequestBody CommentDto commentDto) {
         return commentService.update(id, commentDto);
@@ -32,7 +34,6 @@ public class CommentRestController {
 
     @DeleteMapping("/comments/{id}")
     public Long deleteComment(@PathVariable Long id) {
-        commentService.delete(id);
-        return id;
+        return commentService.delete(id);
     }
 }

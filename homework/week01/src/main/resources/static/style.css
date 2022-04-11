@@ -59,15 +59,40 @@ table.type10 .even {
 
 .modal_content {
     width: 50%;
-    height: 80%;
+    height: 90%;
     background: #fff;
     border-radius: 10px;
     position: relative;
-    margin: 100px auto;
+    margin: 50px auto;
     text-align: center;
     box-sizing: border-box;
     padding: 74px 0;
     line-height: 23px;
+}
+
+.card-comment {
+    display: none;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+    margin: 15px auto;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 23px;
+}
+
+.comments-box {
+    width: 100%;
+    height: 300px;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+    margin: 15px auto;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 23px;
+    overflow: auto;
 }
 
 #delete-board {

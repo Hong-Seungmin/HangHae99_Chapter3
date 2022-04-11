@@ -36,7 +36,7 @@
                 <div class="form-group">
                     <label for="content" class="col-sm-2 control-label">내용</label>
                     <div class="col-sm-10">
-                        <textarea id="content" name="content" class="form-control" placeholder="내용을 입력해 주세요." rows="10"></textarea>
+                        <textarea id="content" name="content" class="form-control" placeholder="내용을 입력해 주세요." rows="5"></textarea>
                     </div>
                 </div>
 
@@ -46,6 +46,47 @@
                     <button id="delete-board" type="button" class="btn btn-danger waves-effect waves-light">삭제하기</button>
                 </div>
             </form>
+
+        </div>
+        <div class="card-comment">
+            <div class="form-group">
+                <label for="writer" class="col-sm-1 control-label">이름</label>
+                <div class="col-sm-2">
+                    <input type="text" id="writer-comment" name="writer-comment" class="form-control" placeholder="이름 입력" />
+                </div>
+                <div class="col-sm-7">
+                    <input type="text" id="comment" name="comment" class="form-control" placeholder="댓글 입력" />
+                </div>
+            </div>
+            <div class="btn_wrap text-center">
+                <button id="save-comment" type="button" class="btn btn-primary waves-effect waves-light">댓글달기</button>
+            </div>
+            <div class="comments-box">
+                <div class="table-area">
+                    <table class="type10">
+                        <colgroup>
+                            <col style="width:65%;">
+                            <col style="width:10%;">
+                            <col style="width:10%;">
+                            <col style="width:15%;">
+                        </colgroup>
+                        <tbody id="comment-container">
+                        <tr>
+                            <td>내용이 들어갑니다.용이 들어갑니다.용이 들어갑니다.</td>
+                            <td>홍길동</td>
+                            <td>1900-01-01</td>
+                            <td>수정/삭제 버튼</td>
+                        </tr>
+                        <tr class="even">
+                            <td>내용이 들어갑니다.</td>
+                            <td>홍길동</td>
+                            <td>1900-01-0111111111</td>
+                            <td>수정/삭제 버튼</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>
