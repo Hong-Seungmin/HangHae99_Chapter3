@@ -3,12 +3,28 @@
 ### 1주차
 
 <details>
-<summary>토글템플릿
+<summary>5일차
 </summary>
 <div markdown="1">
-- 내용
+
+- @Controller 와 @RestController 의 차이는 무엇일까?
+
+  이 둘은 분명 차이는 있지만, 어떤 상황에서 쓰이는지에 대한 이해 없이 무작위로 쓰다보니 문제점이 발생하였다.
+
+  교재를 따라 @RestController를 그대로 이용해서, View 탬플릿을 써야할 상황이 발생하였는데.. 적용이 안되는 것이다.
+
+  덕분에 찾아보긴했는데.. 결과적으로 탬플릿을 쓰려면 @Controller를 써야한다.
+
+  @RestController를 정의한 부분을 찾아보면 `@Controller`와 `@ResponesBody`를 포함하고 있다.
+
+  즉, @ResponeseBody에 의해서 뷰탬플릿 호출이 아닌, 데이터를 전달하게 된다. ([참고](https://dncjf64.tistory.com/288), [참고2](https://joomn11.tistory.com/53))
+  
+  ***ModelAndView객체**에 데이터와 뷰를 담아서 @RestController을 사용할 수 있는 것 같은데.. 정상적인 방법일까? 우회일까?
+ 
+
 </div>
 </details>
+
 
 <details>
 <summary>4일차
